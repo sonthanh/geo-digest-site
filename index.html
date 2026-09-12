@@ -6,9 +6,75 @@
 <title>Geo Digest — all weeks</title>
 <meta name="robots" content="noindex,nofollow">
 <meta name="color-scheme" content="light dark">
+<style>
+/* ── masthead ─────────────────────────────────────────────────────────────
+   Borrows the page's own tokens; introduces no new colour. Sticky, thin, and
+   the first thing print throws away. */
+.mast{position:sticky;top:0;z-index:50;background:var(--card);
+  border-bottom:1px solid var(--rule);font-family:var(--sans)}
+.mast-in{max-width:var(--col,44rem);margin:0 auto;padding:.55rem 1.25rem;display:flex;
+  align-items:center;gap:.75rem;flex-wrap:nowrap}
+.mast-name{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  color:var(--ink);text-decoration:none;white-space:nowrap}
+.mast-name:hover{color:var(--accent)}
+.mast-spacer{flex:1 1 auto}
+.mast-nav{display:flex;align-items:center;gap:.3rem}
+.mast-step{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;
+  height:1.7rem;border:1px solid var(--rule);border-radius:4px;background:var(--ground);
+  color:var(--ink);text-decoration:none;font-size:.85rem;line-height:1}
+.mast-step:hover{border-color:var(--accent);color:var(--accent)}
+.mast-step[aria-disabled="true"]{opacity:.35;pointer-events:none}
+.mast-pick{font-family:var(--mono);font-size:.78rem;padding:.28rem 1.5rem .28rem .5rem;
+  border:1px solid var(--rule);border-radius:4px;background:var(--ground);color:var(--ink);
+  max-width:9rem;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),
+    linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 13px) 52%,calc(100% - 8px) 52%;
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.mast-pick:focus-visible,.mast-q:focus-visible,.mast-step:focus-visible,
+.mast-name:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mast-search{position:relative;flex:0 1 15rem;min-width:6rem}
+.mast-q{width:100%;font-family:var(--sans);font-size:.8rem;padding:.3rem .6rem;
+  border:1px solid var(--rule);border-radius:4px;background:var(--ground);color:var(--ink)}
+.mast-q::placeholder{color:var(--muted)}
+
+/* results panel */
+.mast-res{position:absolute;top:calc(100% + .4rem);right:0;width:min(30rem,88vw);
+  max-height:min(30rem,70vh);overflow-y:auto;background:var(--card);
+  border:1px solid var(--rule);border-radius:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,.14)}
+:root:not([data-theme="light"]) .mast-res{box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.mast-hit{display:block;padding:.6rem .8rem;text-decoration:none;color:var(--ink);
+  border-bottom:1px solid var(--rule)}
+.mast-hit:last-child{border-bottom:0}
+.mast-hit:hover,.mast-hit.on{background:var(--ground)}
+.mast-hit .where{font-family:var(--mono);font-size:.68rem;color:var(--accent);
+  display:block;margin-bottom:.15rem}
+.mast-hit .snip{font-family:var(--serif);font-size:.85rem;line-height:1.5;color:var(--muted);
+  display:block}
+.mast-hit mark{background:color-mix(in srgb,var(--accent) 22%,transparent);color:inherit;
+  border-radius:2px;padding:0 1px}
+.mast-none{padding:.8rem;font-size:.82rem;color:var(--muted)}
+
+@media(max-width:34rem){
+  .mast-in{gap:.45rem;padding:.5rem .7rem}
+  .mast-name{font-size:.62rem;letter-spacing:.12em}
+  .mast-pick{max-width:5.2rem;font-size:.72rem}
+  .mast-search{flex:1 1 6rem}
+}
+/* A sticky bar hides whatever a #anchor jumps to, so every link target keeps a gutter
+   the height of the bar plus a little air. Without this, following a search result lands
+   the reader on a heading tucked under the masthead. */
+h2[id],h3[id]{scroll-margin-top:3.6rem}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@media print{.mast{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
 </head>
 <body>
-
+<header class="mast" style="--col:44rem"><div class="mast-in"><a class="mast-name" href="./">Geo Digest</a><span class="mast-spacer"></span><nav class="mast-nav" aria-label="Issues"><span class="mast-step" aria-disabled="true" aria-hidden="true">‹</span><select class="mast-pick" id="wkpick" aria-label="Jump to an issue"><option value="" selected>All weeks</option><option value="2026-W37" title="Everyone can now close a sea route and nobody can open one, so protection stopped being a promise and became a timetable.">W37</option><option value="2026-W36" title="America told the world to obey and the world did not.">W36</option><option value="2026-W35" title="America can no longer make other countries do what it wants without their agreement.">W35</option><option value="2026-W34" title="America can no longer build the weapons its security guarantees depend on, so it is reaching for tariffs and sanctions instead.">W34</option><option value="2026-W33" title="The guarantee did not run out this week — it changed hands, and every hand that took it attached a price.">W33</option><option value="2026-W32" title="The American guarantee did not break this week — it ran out.">W32</option><option value="2026-W31" title="Money has a price.">W31</option><option value="2026-W30" title="A war nobody can win still has to be paid for, and this week the invoices went out.">W30</option><option value="2026-W28" title="Power is a stock, not a mood — and stocks can be counted.">W28</option><option value="2026-W26" title="A guarantee is worth whatever the guarantor will spend to honour it, and this week the United States published its number.">W26</option><option value="2026-W25" title="A war ended and a price got quoted.">W25</option><option value="2026-W24" title="The world's narrow passages changed owner this week — not by conquest, but because the power that used to guarantee they stay open started negotiating for them instead.">W24</option></select><span class="mast-step" aria-disabled="true" aria-hidden="true">›</span></nav><div class="mast-search"><input class="mast-q" id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search the archive…" aria-label="Search the archive" role="combobox" aria-expanded="false" aria-controls="res"><div class="mast-res" id="res" role="listbox" hidden></div></div></div></header>
 <style>
 :root{--ground:#f7f7f5;--card:#fff;--ink:#16181a;--muted:#5e6670;--rule:#dcdfe3;
   --accent:#2f5d8c;--up:#1b6b57;--down:#b0501d;
@@ -63,15 +129,140 @@ footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);
   <h1>Every week, in one place</h1>
   <p class="sub">Each week's report is its own page. This is the arc across them — where the four scorecards are drifting, and what each week argued.</p>
 
-  <h2>The trend</h2>
+  <h2 id="the-trend">The trend</h2>
   <div class="trend">
     <div class="tr down"><span class="e">US</span><span class="v">1.1</span><span class="spark"><svg viewBox="0 0 90 22" width="90" height="22" aria-hidden="true"><polyline points="0.0,2.0 8.2,3.4 16.4,6.2 24.5,7.5 32.7,8.9 40.9,10.3 49.1,11.7 57.3,13.1 65.5,14.5 73.6,15.8 81.8,17.2 90.0,20.0" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".7"/><circle cx="90.0" cy="20.0" r="2.4" fill="currentColor"/></svg></span></div><div class="tr up"><span class="e">CN</span><span class="v">2.6</span><span class="spark"><svg viewBox="0 0 90 22" width="90" height="22" aria-hidden="true"><polyline points="0.0,20.0 8.2,16.4 16.4,16.4 24.5,16.4 32.7,16.4 40.9,16.4 49.1,12.8 57.3,9.2 65.5,5.6 73.6,5.6 81.8,5.6 90.0,2.0" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".7"/><circle cx="90.0" cy="2.0" r="2.4" fill="currentColor"/></svg></span></div><div class="tr down"><span class="e">VN</span><span class="v">1.1</span><span class="spark"><svg viewBox="0 0 90 22" width="90" height="22" aria-hidden="true"><polyline points="0.0,8.0 8.2,8.0 16.4,8.0 24.5,2.0 32.7,2.0 40.9,8.0 49.1,14.0 57.3,14.0 65.5,14.0 73.6,8.0 81.8,14.0 90.0,20.0" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".7"/><circle cx="90.0" cy="20.0" r="2.4" fill="currentColor"/></svg></span></div><div class="tr down"><span class="e">CH</span><span class="v">2.2</span><span class="spark"><svg viewBox="0 0 90 22" width="90" height="22" aria-hidden="true"><polyline points="0.0,8.0 8.2,8.0 16.4,2.0 24.5,2.0 32.7,2.0 40.9,8.0 49.1,8.0 57.3,2.0 65.5,2.0 73.6,8.0 81.8,14.0 90.0,20.0" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".7"/><circle cx="90.0" cy="20.0" r="2.4" fill="currentColor"/></svg></span></div>
   </div>
 
-  <h2>All weeks</h2>
-  <article class="wk"><div class="wk-top"><h3><a href="2026-W37/">2026-W37</a></h3><div class="scores"><span class="sc"><b>US</b> 1.1</span><span class="sc"><b>CN</b> 2.6</span><span class="sc"><b>VN</b> 1.1</span><span class="sc"><b>CH</b> 2.2</span></div></div><p class="thesis">Everyone can now close a sea route and nobody can open one, so protection stopped being a promise and became a timetable.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W36/">2026-W36</a></h3><div class="scores"><span class="sc"><b>US</b> 1.3</span><span class="sc"><b>CN</b> 2.5</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.3</span></div></div><p class="thesis">America told the world to obey and the world did not.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W35/">2026-W35</a></h3><div class="scores"><span class="sc"><b>US</b> 1.4</span><span class="sc"><b>CN</b> 2.5</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">America can no longer make other countries do what it wants without their agreement.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W34/">2026-W34</a></h3><div class="scores"><span class="sc"><b>US</b> 1.5</span><span class="sc"><b>CN</b> 2.5</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">America can no longer build the weapons its security guarantees depend on, so it is reaching for tariffs and sanctions instead.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W33/">2026-W33</a></h3><div class="scores"><span class="sc"><b>US</b> 1.6</span><span class="sc"><b>CN</b> 2.4</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">The guarantee did not run out this week — it changed hands, and every hand that took it attached a price.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W32/">2026-W32</a></h3><div class="scores"><span class="sc"><b>US</b> 1.7</span><span class="sc"><b>CN</b> 2.3</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">The American guarantee did not break this week — it ran out.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W31/">2026-W31</a></h3><div class="scores"><span class="sc"><b>US</b> 1.8</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">Money has a price.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W30/">2026-W30</a></h3><div class="scores"><span class="sc"><b>US</b> 1.9</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.4</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">A war nobody can win still has to be paid for, and this week the invoices went out.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W28/">2026-W28</a></h3><div class="scores"><span class="sc"><b>US</b> 2.0</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.4</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">Power is a stock, not a mood — and stocks can be counted.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W26/">2026-W26</a></h3><div class="scores"><span class="sc"><b>US</b> 2.1</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">A guarantee is worth whatever the guarantor will spend to honour it, and this week the United States published its number.</p><p class="meta">3 essays</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W25/">2026-W25</a></h3><div class="scores"><span class="sc"><b>US</b> 2.3</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">A war ended and a price got quoted.</p><p class="meta">1 essay</p></article><article class="wk"><div class="wk-top"><h3><a href="2026-W24/">2026-W24</a></h3><div class="scores"><span class="sc"><b>US</b> 2.4</span><span class="sc"><b>CN</b> 2.1</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">The world's narrow passages changed owner this week — not by conquest, but because the power that used to guarantee they stay open started negotiating for them instead.</p><p class="meta">3 essays</p></article>
+  <h2 id="all-weeks">All weeks</h2>
+  <article class="wk"><div class="wk-top"><h3 id="2026-w37"><a href="2026-W37/">2026-W37</a></h3><div class="scores"><span class="sc"><b>US</b> 1.1</span><span class="sc"><b>CN</b> 2.6</span><span class="sc"><b>VN</b> 1.1</span><span class="sc"><b>CH</b> 2.2</span></div></div><p class="thesis">Everyone can now close a sea route and nobody can open one, so protection stopped being a promise and became a timetable.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w36"><a href="2026-W36/">2026-W36</a></h3><div class="scores"><span class="sc"><b>US</b> 1.3</span><span class="sc"><b>CN</b> 2.5</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.3</span></div></div><p class="thesis">America told the world to obey and the world did not.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w35"><a href="2026-W35/">2026-W35</a></h3><div class="scores"><span class="sc"><b>US</b> 1.4</span><span class="sc"><b>CN</b> 2.5</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">America can no longer make other countries do what it wants without their agreement.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w34"><a href="2026-W34/">2026-W34</a></h3><div class="scores"><span class="sc"><b>US</b> 1.5</span><span class="sc"><b>CN</b> 2.5</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">America can no longer build the weapons its security guarantees depend on, so it is reaching for tariffs and sanctions instead.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w33"><a href="2026-W33/">2026-W33</a></h3><div class="scores"><span class="sc"><b>US</b> 1.6</span><span class="sc"><b>CN</b> 2.4</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">The guarantee did not run out this week — it changed hands, and every hand that took it attached a price.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w32"><a href="2026-W32/">2026-W32</a></h3><div class="scores"><span class="sc"><b>US</b> 1.7</span><span class="sc"><b>CN</b> 2.3</span><span class="sc"><b>VN</b> 1.2</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">The American guarantee did not break this week — it ran out.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w31"><a href="2026-W31/">2026-W31</a></h3><div class="scores"><span class="sc"><b>US</b> 1.8</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">Money has a price.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w30"><a href="2026-W30/">2026-W30</a></h3><div class="scores"><span class="sc"><b>US</b> 1.9</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.4</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">A war nobody can win still has to be paid for, and this week the invoices went out.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w28"><a href="2026-W28/">2026-W28</a></h3><div class="scores"><span class="sc"><b>US</b> 2.0</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.4</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">Power is a stock, not a mood — and stocks can be counted.</p><p class="meta">4 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w26"><a href="2026-W26/">2026-W26</a></h3><div class="scores"><span class="sc"><b>US</b> 2.1</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.5</span></div></div><p class="thesis">A guarantee is worth whatever the guarantor will spend to honour it, and this week the United States published its number.</p><p class="meta">3 essays</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w25"><a href="2026-W25/">2026-W25</a></h3><div class="scores"><span class="sc"><b>US</b> 2.3</span><span class="sc"><b>CN</b> 2.2</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">A war ended and a price got quoted.</p><p class="meta">1 essay</p></article><article class="wk"><div class="wk-top"><h3 id="2026-w24"><a href="2026-W24/">2026-W24</a></h3><div class="scores"><span class="sc"><b>US</b> 2.4</span><span class="sc"><b>CN</b> 2.1</span><span class="sc"><b>VN</b> 1.3</span><span class="sc"><b>CH</b> 2.4</span></div></div><p class="thesis">The world's narrow passages changed owner this week — not by conquest, but because the power that used to guarantee they stay open started negotiating for them instead.</p><p class="meta">3 essays</p></article>
 
   <footer>12 weeks. Composites are the 8-determinant score. A week with no link has not been published as a page.</footer>
 </div>
+<script data-root="./">
+(function(){
+  var root = document.currentScript.getAttribute('data-root') || './';
+  var q = document.getElementById('q'), res = document.getElementById('res');
+  var pick = document.getElementById('wkpick');
+  if (pick) pick.addEventListener('change', function(){
+    if (pick.value) location.href = root + pick.value + '/';
+    else location.href = root;
+  });
+  if (!q || !res) return;
+
+  var idx = null, loading = false, cur = -1, hits = [];
+
+  function load(){
+    if (idx || loading) return Promise.resolve();
+    loading = true;
+    return fetch(root + 'search-index.json')
+      .then(function(r){ return r.json(); })
+      .then(function(j){ idx = j; loading = false; })
+      .catch(function(){ loading = false; idx = []; });
+  }
+
+  function esc(s){ return s.replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function terms(s){
+    return s.toLowerCase().split(/[^a-z0-9à-ỹ]+/i).filter(function(t){ return t.length > 1; });
+  }
+
+  // Snippet centred on the first match, with every term marked. Cut on a word boundary so
+  // the excerpt does not start mid-syllable.
+  function snippet(text, ts){
+    var low = text.toLowerCase(), at = -1;
+    for (var i = 0; i < ts.length; i++){
+      var p = low.indexOf(ts[i]);
+      if (p !== -1 && (at === -1 || p < at)) at = p;
+    }
+    if (at === -1) at = 0;
+    var from = Math.max(0, at - 60), to = Math.min(text.length, from + 190);
+    if (from > 0){ var sp = text.indexOf(' ', from); if (sp !== -1 && sp < from + 20) from = sp + 1; }
+    var s = esc(text.slice(from, to));
+    ts.forEach(function(t){
+      s = s.replace(new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'),
+                    '<mark>$1</mark>');
+    });
+    return (from > 0 ? '…' : '') + s + (to < text.length ? '…' : '');
+  }
+
+  function search(str){
+    var ts = terms(str);
+    if (!ts.length || !idx) return [];
+    var out = [];
+    for (var i = 0; i < idx.length; i++){
+      var r = idx[i], hay = (r.t + ' ' + r.x).toLowerCase(), score = 0, all = true;
+      for (var j = 0; j < ts.length; j++){
+        var n = hay.split(ts[j]).length - 1;
+        if (!n) { all = false; break; }
+        // a hit in the heading, or in the week's own headline, outranks one in the body
+        score += n + (r.t.toLowerCase().indexOf(ts[j]) !== -1 ? 12 : 0) + (r.t === '' ? 6 : 0);
+      }
+      if (all) out.push({ r: r, s: score });
+    }
+    out.sort(function(a, b){ return b.s - a.s; });
+    return out.slice(0, 20).map(function(o){ return o.r; });
+  }
+
+  function render(str){
+    var ts = terms(str);
+    if (!hits.length){
+      res.innerHTML = '<div class="mast-none">Nothing matches “' + esc(str) + '”.</div>';
+      res.hidden = false; q.setAttribute('aria-expanded', 'true');
+      return;
+    }
+    res.innerHTML = hits.map(function(r, i){
+      var where = r.w + (r.t ? ' › ' + esc(r.t) : '');
+      return '<a class="mast-hit' + (i === cur ? ' on' : '') + '" role="option" ' +
+             'href="' + root + r.w + '/' + (r.a ? '#' + r.a : '') + '">' +
+             '<span class="where">' + where + '</span>' +
+             '<span class="snip">' + snippet(r.x, ts) + '</span></a>';
+    }).join('');
+    res.hidden = false; q.setAttribute('aria-expanded', 'true');
+  }
+
+  function close(){
+    res.hidden = true; q.setAttribute('aria-expanded', 'false'); cur = -1;
+  }
+
+  function run(){
+    var v = q.value.trim();
+    if (v.length < 2){ close(); return; }
+    load().then(function(){
+      cur = -1; hits = search(v); render(v);
+    });
+  }
+
+  var t;
+  q.addEventListener('input', function(){ clearTimeout(t); t = setTimeout(run, 120); });
+  q.addEventListener('focus', load);
+  q.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ close(); q.blur(); return; }
+    if (res.hidden || !hits.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+      e.preventDefault();
+      cur += (e.key === 'ArrowDown' ? 1 : -1);
+      if (cur < 0) cur = hits.length - 1;
+      if (cur >= hits.length) cur = 0;
+      render(q.value.trim());
+      var on = res.querySelector('.on'); if (on) on.scrollIntoView({ block: 'nearest' });
+    } else if (e.key === 'Enter' && cur >= 0){
+      e.preventDefault();
+      var a = res.querySelectorAll('.mast-hit')[cur]; if (a) location.href = a.href;
+    }
+  });
+  document.addEventListener('click', function(e){
+    if (!res.hidden && !res.contains(e.target) && e.target !== q) close();
+  });
+  // "/" focuses search, the way every news archive does it.
+  document.addEventListener('keydown', function(e){
+    if (e.key === '/' && document.activeElement !== q &&
+        !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)){
+      e.preventDefault(); q.focus();
+    }
+  });
+})();
+</script>
 </body>
 </html>
