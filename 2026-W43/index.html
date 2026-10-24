@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Geo Digest — Week 2026-W43 (Oct 19–25, 2026)</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light dark">
+<style>
+/* ── masthead ─────────────────────────────────────────────────────────────
+   Borrows the page's own tokens; introduces no new colour. Sticky, thin, and
+   the first thing print throws away. */
+.mast{position:sticky;top:0;z-index:50;background:var(--card);
+  border-bottom:1px solid var(--rule);font-family:var(--sans)}
+.mast-in{max-width:var(--col,44rem);margin:0 auto;padding:.55rem 1.25rem;display:flex;
+  align-items:center;gap:.75rem;flex-wrap:nowrap}
+.mast-name{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  color:var(--ink);text-decoration:none;white-space:nowrap}
+.mast-name:hover{color:var(--accent)}
+.mast-spacer{flex:1 1 auto}
+.mast-nav{display:flex;align-items:center;gap:.3rem}
+.mast-step{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;
+  height:1.7rem;border:1px solid var(--rule);border-radius:4px;background:var(--ground);
+  color:var(--ink);text-decoration:none;font-size:.85rem;line-height:1}
+.mast-step:hover{border-color:var(--accent);color:var(--accent)}
+.mast-step[aria-disabled="true"]{opacity:.35;pointer-events:none}
+.mast-pick{font-family:var(--mono);font-size:.78rem;padding:.28rem 1.5rem .28rem .5rem;
+  border:1px solid var(--rule);border-radius:4px;background:var(--ground);color:var(--ink);
+  max-width:9rem;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),
+    linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 13px) 52%,calc(100% - 8px) 52%;
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.mast-pick:focus-visible,.mast-q:focus-visible,.mast-step:focus-visible,
+.mast-name:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mast-search{position:relative;flex:0 1 15rem;min-width:6rem}
+.mast-q{width:100%;font-family:var(--sans);font-size:.8rem;padding:.3rem .6rem;
+  border:1px solid var(--rule);border-radius:4px;background:var(--ground);color:var(--ink)}
+.mast-q::placeholder{color:var(--muted)}
+
+/* results panel */
+.mast-res{position:absolute;top:calc(100% + .4rem);right:0;width:min(30rem,88vw);
+  max-height:min(30rem,70vh);overflow-y:auto;background:var(--card);
+  border:1px solid var(--rule);border-radius:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,.14)}
+:root:not([data-theme="light"]) .mast-res{box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.mast-hit{display:block;padding:.6rem .8rem;text-decoration:none;color:var(--ink);
+  border-bottom:1px solid var(--rule)}
+.mast-hit:last-child{border-bottom:0}
+.mast-hit:hover,.mast-hit.on{background:var(--ground)}
+.mast-hit .where{font-family:var(--mono);font-size:.68rem;color:var(--accent);
+  display:block;margin-bottom:.15rem}
+.mast-hit .snip{font-family:var(--serif);font-size:.85rem;line-height:1.5;color:var(--muted);
+  display:block}
+.mast-hit mark{background:color-mix(in srgb,var(--accent) 22%,transparent);color:inherit;
+  border-radius:2px;padding:0 1px}
+.mast-none{padding:.8rem;font-size:.82rem;color:var(--muted)}
+
+@media(max-width:34rem){
+  .mast-in{gap:.45rem;padding:.5rem .7rem}
+  .mast-name{font-size:.62rem;letter-spacing:.12em}
+  .mast-pick{max-width:5.2rem;font-size:.72rem}
+  .mast-search{flex:1 1 6rem}
+}
+/* A sticky bar hides whatever a #anchor jumps to, so every link target keeps a gutter
+   the height of the bar plus a little air. Without this, following a search result lands
+   the reader on a heading tucked under the masthead. */
+h2[id],h3[id]{scroll-margin-top:3.6rem}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@media print{.mast{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="mast" style="--col:40rem"><div class="mast-in"><a class="mast-name" href="../">Geo Digest</a><span class="mast-spacer"></span><nav class="mast-nav" aria-label="Issues"><a class="mast-step" href="../2026-W42/" rel="prev" title="Older: 2026-W42" aria-label="Older issue, 2026-W42">‹</a><select class="mast-pick" id="wkpick" aria-label="Jump to an issue"><option value="2026-W43" selected title="America steps back from guarding the world, and the places it no longer guards now pay their own, higher price.">W43</option><option value="2026-W42" title="America traded its protection of allies for cheaper diesel, and cheap drones are closing the sea lanes that protection used to keep open.">W42</option><option value="2026-W41" title="America is handing the Iran war it cannot finish to Saudi Arabia, Turkey and Pakistan, and paying for cheaper fuel with its allies' trust.">W41</option><option value="2026-W40" title="Nobody can win the Iran war in the open, so it moved into spies, distant blockades and the price of diesel and money.">W40</option><option value="2026-W39" title="The Iran war now costs both sides more than it gains, so this week both started looking for a way out.">W39</option><option value="2026-W38" title="America can no longer protect its allies for free, so it started charging them, and its allies spent the week quietly arranging their own protection.">W38</option><option value="2026-W37" title="Everyone can now close a sea route and nobody can open one, so protection stopped being a promise and became a timetable.">W37</option><option value="2026-W36" title="America told the world to obey and the world did not.">W36</option><option value="2026-W35" title="America can no longer make other countries do what it wants without their agreement.">W35</option><option value="2026-W34" title="America can no longer build the weapons its security guarantees depend on, so it is reaching for tariffs and sanctions instead.">W34</option><option value="2026-W33" title="The guarantee did not run out this week — it changed hands, and every hand that took it attached a price.">W33</option><option value="2026-W32" title="The American guarantee did not break this week — it ran out.">W32</option><option value="2026-W31" title="Money has a price.">W31</option><option value="2026-W30" title="A war nobody can win still has to be paid for, and this week the invoices went out.">W30</option><option value="2026-W28" title="Power is a stock, not a mood — and stocks can be counted.">W28</option><option value="2026-W26" title="A guarantee is worth whatever the guarantor will spend to honour it, and this week the United States published its number.">W26</option><option value="2026-W25" title="A war ended and a price got quoted.">W25</option><option value="2026-W24" title="The world's narrow passages changed owner this week — not by conquest, but because the power that used to guarantee they stay open started negotiating for them instead.">W24</option></select><span class="mast-step" aria-disabled="true" aria-hidden="true">›</span></nav><div class="mast-search"><input class="mast-q" id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search the archive…" aria-label="Search the archive" role="combobox" aria-expanded="false" aria-controls="res"><div class="mast-res" id="res" role="listbox" hidden></div></div></div></header>
+<style>
+:root{
+  --ground:#f7f7f5;--card:#fff;--ink:#16181a;--muted:#5e6670;--rule:#dcdfe3;
+  --accent:#2f5d8c;--warn:#b0501d;--rule-strong:#16181a;
+  --serif:Georgia,"Iowan Old Style",Palatino,serif;
+  --sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media(prefers-color-scheme:dark){:root{--ground:#101214;--card:#191c1f;--ink:#e6e8ea;
+  --muted:#949ba4;--rule:#282c31;--accent:#7fa8d4;--warn:#dd8b52;--rule-strong:#e6e8ea}}
+:root[data-theme="dark"]{--ground:#101214;--card:#191c1f;--ink:#e6e8ea;--muted:#949ba4;
+  --rule:#282c31;--accent:#7fa8d4;--warn:#dd8b52;--rule-strong:#e6e8ea}
+:root[data-theme="light"]{--ground:#f7f7f5;--card:#fff;--ink:#16181a;--muted:#5e6670;
+  --rule:#dcdfe3;--accent:#2f5d8c;--warn:#b0501d;--rule-strong:#16181a}
+
+*{box-sizing:border-box}
+html{font-size:118%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--serif);
+  line-height:1.7;-webkit-font-smoothing:antialiased}
+/* Prose keeps a reading measure — past roughly 70 characters the eye loses its place on the
+   return sweep, which is why newspapers set columns and not full-width slabs. But the WIDE
+   things should not be trapped in it: the causal chain is ~1996px and was being crammed into
+   a 640px box with a scrollbar, which is the worst of both. So the page is a grid with a
+   narrow text track and a wider one either side, and only the things that benefit break out.
+   Reader, 2026-09-13: "why not responsive to use all possible width and adapt on screen". */
+.page{
+  display:grid;
+  grid-template-columns:
+    [full-start] minmax(1.25rem,1fr)
+    [wide-start] minmax(0,11rem)
+    [text-start] min(calc(100% - 2.5rem),40rem) [text-end]
+    minmax(0,11rem) [wide-end]
+    minmax(1.25rem,1fr) [full-end];
+  padding:3rem 0 5rem;
+  row-gap:0;
+}
+/* min(40rem,100%) resolved its 100% against the whole container and ignored the gutters, so
+   every row sat exactly one gutter too wide and the page scrolled sideways on a phone.
+   minmax(0,40rem) lets the track shrink instead. */
+/* The wrappers are structural, not visual, so their children join the grid directly.
+   display:contents promotes those children to grid items, but a child combinator still
+   matches the DOM and not the grid — so they must be placed explicitly, or they auto-flow
+   into whatever column is free, which put the Vietnam heading in the right-hand gutter. */
+section.opening,section.lad{display:contents}
+.page > *,section.opening > *,section.lad > *{grid-column:text}
+/* everything that is genuinely wide, and nothing else */
+/* Specificity matters here: "section.opening > *" is (0,1,1) and beats a bare class, so the
+   breakout rules are scoped through .page to outrank it. Without this the chart silently
+   snapped back to the text column and the whole point was lost. */
+.page .scroll,.page .fork,.page .trend{grid-column:wide}
+/* The chain carries a 1996px floor so its node text stays legible; anything narrower is a
+   scrollbar. Give it every pixel the window has rather than a column. */
+.page .chainblock{grid-column:full}
+.page .chainblock .chart{padding:1.1rem 1.25rem}
+/* Below the breakpoint there is no room for a wide track, and a starved grid gave the text
+   column 114px on a phone. Drop back to the plain centred column that worked before — the
+   grid is an enhancement for screens that can actually use it, not the base case. */
+@media(max-width:56rem){
+  .page{display:block;max-width:40rem;margin:0 auto;padding:3rem 1.25rem 5rem}
+  section.opening,section.lad{display:block}
+  .page > *,section.opening > *,section.lad > *,
+  .page .scroll,.page .fork,.page .trend,.page .chainblock{grid-column:auto}
+}
+.kicker{font-family:var(--sans);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.7rem}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;margin:0 0 1.1rem;font-weight:600;
+  letter-spacing:-.02em;text-wrap:balance}
+.sub{font-size:1.18rem;color:var(--muted);margin:0 0 1rem;line-height:1.6}
+h2{font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  margin:3.5rem 0 1.2rem;padding-top:.6rem;border-top:2px solid var(--rule-strong);font-weight:700}
+h3{font-size:1.25rem;margin:2.5rem 0 .6rem;font-weight:600}
+p{margin:0 0 1.1rem}
+ul{margin:0 0 1.1rem;padding-left:1.15rem}
+li{margin-bottom:.55rem}
+a{color:var(--accent)}
+
+/* The opening carried the same body size as a footnote while the ladders below it read at
+   1.08rem with numbers and boxes, so the reader met the hardest prose in the smallest type.
+   Match the ladder's reading size — this is the part that has to land first. */
+.opening p,.opening li{font-size:1.08rem;line-height:1.6}
+.opening .rulebox{font-size:1.08rem}
+
+.ladder{counter-reset:s;margin:0 0 1.5rem;padding:0;list-style:none}
+.ladder li{counter-increment:s;position:relative;padding:0 0 1.4rem 3rem;
+  border-left:2px solid var(--rule);margin-bottom:0}
+.ladder li:last-child{border-left-color:transparent;padding-bottom:0}
+.ladder li::before{content:counter(s);position:absolute;left:-.85rem;top:0;
+  width:1.65rem;height:1.65rem;border-radius:50%;background:var(--accent);color:#fff;
+  font-family:var(--mono);font-size:.8rem;display:flex;align-items:center;justify-content:center;
+  font-weight:600}
+.ladder .what{display:block;font-size:1.08rem;line-height:1.5;margin-bottom:.25rem}
+.ladder .why{display:block;font-size:.98rem;color:var(--muted)}
+.ladder .why b{font-family:var(--sans);font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin-right:.4rem}
+.ladder li.end .what{color:var(--warn);font-weight:600}
+.ladder li.end::before{background:var(--warn)}
+
+/* The staircase that opens the week. Questions carry the sans (they are signposts, not
+   prose); answers stay in the serif at reading size, indented behind a rule so the eye
+   can run down the questions alone and stop where it wants. The last answer is the one
+   that reaches the reader, so it takes the warn colour the ladders' last step uses. */
+.stair{margin:0 0 1.6rem;padding:0;list-style:none}
+.stair li{margin:0 0 .1rem;padding:0}
+.stair .q{font-family:var(--sans);font-weight:700;font-size:.97rem;line-height:1.45;
+  display:block;color:var(--ink);margin-bottom:.2rem;text-wrap:balance}
+.stair .a{display:block;font-size:1.05rem;line-height:1.6;color:var(--muted);
+  padding:0 0 1rem 1.1rem;border-left:2px solid var(--rule);margin-left:.15rem}
+.stair li:last-child .a{border-left-color:var(--warn);color:var(--ink)}
+.stair .a strong{color:var(--ink)}
+
+/* The hinge as a fork: one question, two arms, read in a single movement. Two columns
+   rather than an SVG so it stacks on a phone and prints without a landscape sheet. */
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:0 0 1.5rem}
+.fork .arm{background:var(--card);border:1px solid var(--rule);border-radius:5px;
+  padding:.9rem 1.05rem;font-size:1rem;line-height:1.55}
+.fork .arm b{font-family:var(--sans);font-size:.62rem;letter-spacing:.13em;
+  text-transform:uppercase;display:block;margin-bottom:.4rem;font-weight:700}
+.fork .holds{border-top:3px solid var(--accent)}
+.fork .holds b{color:var(--accent)}
+.fork .rev{border-top:3px solid var(--warn)}
+.fork .rev b{color:var(--warn)}
+@media(max-width:30rem){.fork{grid-template-columns:1fr}}
+
+/* "Now you try" — the only part of the page that asks the reader to do something. The
+   report exists to teach the chain of reasoning, not to hand over conclusions; without a
+   place to practise, a beginner learns this week and not the method. Marked out from the
+   explanatory boxes deliberately: a different border, and the questions carry the sans
+   so they read as prompts rather than prose. */
+.turn{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--good,#1b6b57);
+  border-radius:0 5px 5px 0;padding:1rem 1.2rem;margin:0 0 1.5rem;font-size:1rem}
+.turn p:last-child{margin-bottom:0}
+.turn ol{margin:.5rem 0 1rem;padding-left:1.2rem}
+.turn ol li{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin-bottom:.45rem}
+.turn strong{color:var(--ink)}
+:root{--good:#1b6b57}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--good:#4fb89a}}
+:root[data-theme="dark"]{--good:#4fb89a}
+
+.rulebox{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);
+  border-radius:0 5px 5px 0;padding:1rem 1.2rem;margin:0 0 1.5rem;font-size:1rem}
+.rulebox b{font-family:var(--sans);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);display:block;margin-bottom:.4rem;font-weight:700}
+.miss{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--warn);
+  border-radius:0 5px 5px 0;padding:1rem 1.2rem;margin:0 0 1.5rem;font-size:1rem}
+.miss b{font-family:var(--sans);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--warn);display:block;margin-bottom:.4rem;font-weight:700}
+.miss p:last-child,.rulebox p:last-child{margin-bottom:0}
+
+.chart{overflow-x:auto;background:var(--card);border:1px solid var(--rule);border-radius:5px;
+  padding:1.1rem;margin:0 0 1.2rem}
+.chart svg{display:block;margin:0 auto;width:100%;height:auto}
+.chart .edge{fill:none;stroke:var(--muted);stroke-width:1.2;opacity:.7}
+.chart .arrow{fill:var(--muted);opacity:.7}
+.chart .node rect{fill:var(--ground);stroke:var(--rule)}
+.chart .node text{font-family:var(--sans);font-size:13px;fill:var(--ink)}
+.chart .node.terminal rect{fill:color-mix(in srgb,var(--accent) 16%,var(--ground));
+  stroke:var(--accent);stroke-width:1.5}
+.bands{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.4rem;
+  font-family:var(--sans);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);font-weight:700}
+
+.short{background:var(--card);border:1px solid var(--rule);border-radius:5px;
+  padding:1rem 1.2rem;margin-bottom:.7rem}
+.short p:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:.92rem;margin-bottom:1.2rem}
+th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:700;white-space:nowrap}
+.scroll{overflow-x:auto}
+
+button.term{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;
+  border-bottom:1px dashed var(--accent);text-underline-offset:2px}
+button.term:hover{color:var(--accent)}
+button.term:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.term[aria-expanded="true"]{color:var(--accent);border-bottom-style:solid}
+button.term::after{content:"?";font-family:var(--sans);font-size:.6em;vertical-align:super;
+  color:var(--accent);margin-left:1px;font-weight:700}
+.termdef{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);
+  border-radius:0 4px 4px 0;padding:.8rem 1rem;margin:.6rem 0 1.1rem;font-size:.95rem;line-height:1.6}
+.termdef b{font-family:var(--sans);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);display:block;margin-bottom:.3rem;font-weight:700}
+
+footer{margin-top:3.5rem;padding-top:1rem;border-top:1px solid var(--rule);
+  font-family:var(--sans);font-size:.75rem;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ── print / PDF ──────────────────────────────────────────────────────────
+   The page is also delivered as a PDF, because the weekly run is headless and
+   headless sessions have no Artifact tool — so paper, not a URL, is what the
+   reader actually gets. Three things break when this page meets a printer:
+
+   1. The causal chain is an SVG ~1680px wide inside a scrolling box. On screen
+      you scroll it; on paper the right-hand side — where the chain LANDS, on
+      VN and CH — is simply guillotined. That is the one section the digest
+      exists for, so print releases the min-width and lets the viewBox scale.
+   2. A reader whose OS is in dark mode would otherwise get a PDF with a near
+      black background, so print pins the light palette regardless.
+   3. Glossary terms are click-to-expand buttons. A button cannot be clicked on
+      paper, so print drops the "?" affordance and prints the definitions once,
+      as a list at the end. */
+.printgloss{display:none}
+@page{size:A4;margin:12mm 12mm 13mm}
+/* The chain is ~2.5x wider than it is tall, so a portrait column is the wrong paper for it:
+   fitted to a 182mm column it rendered 29mm tall with node text at ~4.6px. A named landscape
+   page gives it the long axis it was drawn on — same diagram, ~2x the scale. */
+@page chain{size:A4 landscape;margin:12mm}
+@media print{
+  :root,:root[data-theme="dark"]{--ground:#fff;--card:#fff;--ink:#16181a;--muted:#4a5058;
+    --rule:#c9ced4;--accent:#2f5d8c;--up:#1b6b57;--down:#b0501d;--warn:#8a6d1f}
+  /* Print density. This was 81.25%/1.45 — 13px — chosen to defend the page budget, and the
+     reader's verdict on the printed W33 was that the whole report was hard to read, the
+     ladders included. Legibility is the constraint that outranks length: a report nobody can
+     read at 6 pages is worth less than one they can at 8. 14px/1.55 body serif at A4. */
+  html{font-size:87.5%}
+  body{background:#fff;line-height:1.55}
+  h1{font-size:1.9rem;margin-bottom:.5rem}
+  h2{margin:1.5rem 0 .7rem;padding-top:.4rem}
+  h3{margin:1rem 0 .5rem}
+  p{margin:0 0 .6rem}
+  .sub{margin-bottom:1rem}
+  .ladder li{padding-bottom:.8rem}
+  .rulebox,.miss,.short{padding:.7rem .9rem;margin-bottom:.9rem}
+  th,td{padding:.35rem .5rem}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  /* Left padding is NOT decoration: ladder step badges are absolutely positioned at
+     left:-.85rem, so with zero padding the numbered circles are sliced in half by the
+     paper's edge. Keep a gutter wide enough to hold them. */
+  .page{display:block;max-width:none;padding:0 0 0 1.1rem}
+  section.opening,section.lad{display:block}
+  .chainblock,.chart,.scroll,.fork,.trend{grid-column:auto}
+  /* fit the chain to the paper instead of cropping it */
+  .chart{overflow:visible;padding:.6rem}
+  .chart svg{min-width:0!important;width:100%;height:auto}
+  /* The chain takes the landscape sheet declared above, alone. The break-before/after pair is
+     what actually moves it there: a named page only applies to the pages a box lands on, so
+     without the breaks the preceding prose would be dragged onto landscape with it. */
+  .chainblock{page:chain;break-before:page;break-after:page;break-inside:avoid}
+  .chainblock .chart{border:0;padding:0}
+  .chainblock h2{margin-top:0}
+  .chainblock .bands{font-size:.8rem}
+  .scroll{overflow:visible}
+  table{font-size:.8rem}
+  /* A row that splits across a page leaves its tail alone under a repeated header —
+     "case to pre-position for." stranded at the top of page 15, W32. */
+  tr{break-inside:avoid}
+  /* Keep a unit of argument together — but only units that FIT on a page. An
+     11-step country ladder is taller than A4, so telling the whole <ol> not to
+     break just pushes it whole and leaves the previous page two-thirds empty.
+     The atom worth protecting is one step and its "because", not the ladder. */
+  /* A question stranded at the foot of a page with its answer overleaf is the one break
+     that makes the staircase unreadable. */
+  .stair li{break-inside:avoid}
+  .stair .a{padding-bottom:.6rem}
+  .fork{break-inside:avoid}
+  .turn{break-inside:avoid}
+  .tr,.short,.miss,.rulebox,.card{break-inside:avoid}
+  .ladder li{break-inside:avoid}
+  h1,h2,h3{break-after:avoid}
+  a{color:var(--accent);text-decoration:none}
+  button.term{border-bottom:0;color:inherit;cursor:auto}
+  button.term::after{content:""}
+  .termdef{display:none}
+  /* Flows after the footer rather than claiming a page of its own — a forced break put a
+     half-empty glossary on p7 and broke the 6-page budget by itself. */
+  .printgloss{display:block;break-inside:avoid}
+  .printgloss h2{margin-top:1.2rem}
+  .printgloss dt{font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--accent);font-weight:700;margin-top:.9rem}
+  .printgloss dd{margin:.15rem 0 0;font-size:.92rem;line-height:1.55}
+}
+</style>
+
+<div class="page">
+  <div class="kicker">Geo Digest &middot; 2026-W43 &middot; Oct 19–25, 2026</div>
+  <h1>America steps back from guarding the world, and the places it no longer guards now pay their own, higher price.</h1>
+  <p class="sub">Great powers settle Ukraine's war without Kyiv, Gulf oil splits into three prices, and savers flee riot-hit France for the Swiss franc.</p>
+
+  <section class="opening"><h2 id="first-the-rule-that-never-changes">First, the rule that never changes</h2><div class="rulebox"><b>The rule</b><p>Q: What keeps one price for oil everywhere?</p>
+<p>A: Safe sea routes. When every ship arrives, oil costs about the same in every port.</p>
+<p>Q: And when the routes stop being safe?</p>
+<p>A: Each region pays its own price. The buyer farthest from the oil pays most.</p>
+<p>Think of it like this. One guard kept every road to a market safe, so every shop paid the same for its goods. Now he guards only his own street and bargains with the bandits. The far-off shops hire their own escorts, and their goods cost more.</p>
+<p>This week the guard is America. The far-off shops are Kyiv, Europe and Asia.</p></div><h2 id="the-whole-week-as-one-picture">The whole week as one picture</h2><ol class="stair"><li><span class="q">Why does oil cost so much more in Asia than in America this week?</span><span class="a">Because ships, not oil, are now short. Attacks in the Gulf and on Russian tankers mean every barrel needs a longer, riskier trip. Peter Zeihan says delivery now adds at least $25 a barrel, and over $40 to Asia. America pumps its own oil and pays far less.</span></li><li><span class="q">Who used to keep those sea routes safe?</span><span class="a">America, and it is stepping back. This week it ordered some diplomats out of Saudi Arabia after Houthi rebels from Yemen struck an airport and an oil field there. Britain is sending jets to defend Saudi Arabia instead.</span></li><li><span class="q">Is America stepping back anywhere else?</span><span class="a">Yes, in Ukraine. Washington pushes Russia toward peace talks, and a meeting of Trump, Putin and Xi looks more likely. Ukraine and Europe risk losing their seat at that table. Russia agreed to talk, then fired three waves of missiles at Ukraine within hours.</span></li><li><span class="q">Why does America settle the war without Ukraine?</span><span class="a">Because nobody is winning, and the war costs America fuel and attention. George Friedman calls it a stalemate: Russia cannot conquer Ukraine, and Ukraine cannot push Russia out. With oil this dear, ending the war looks cheaper to Washington than paying for it. Kyiv's friends call that betrayal.</span></li><li><span class="q">Where does the money go while this happens?</span><span class="a">Away from the weakest big borrower. In France, riots and a weak government pushed the cost of ten-year borrowing above 5%, more than Italy pays. Savers moved their money to places they trust: the Swiss franc, the Japanese yen and Japanese government bonds.</span></li><li><span class="q">What reaches Vietnam and Switzerland?</span><span class="a">Opposite bills. Switzerland gets the money: the franc rose to its strongest against the euro since July, which makes Swiss watches dearer abroad just as French riots hurt sales. Vietnam gets the cost: dear fuel, dearer loans across the region, and a growth plan that already needs more money than it raises.</span></li><li><span class="q">What will change the answer?</span><span class="a">Ships and signatures, not speeches. Watch whether the cost of delivering Gulf oil to Asia falls. When any Ukraine deal is signed, watch whether Kyiv sits at the table. And watch France's ten-year borrowing cost: back below Italy's means the run to safety is over.</span></li></ol><p><strong>The weakest link, and what the chain shows.</strong> The arrow from dear oil to dearer loans in Asia is the weak one. The Philippines raised its rate against rising prices, but no source this week says oil caused them. The next statements of Asian central banks will test it: do they name fuel? The chain shows one thing beneath everything: a guard who steps back does not end the danger. He moves its bill to whoever stands farthest from him.</p><div class="chainblock"><h2 id="the-same-week-as-a-map">The same week, as a map</h2><div class="bands"><div>What drives it</div><div>How it travels</div><div>Where it lands</div></div><div class="chart"><svg viewBox="0 0 1108 357" style="min-width:1108px" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Causal chain: IRAN to OILSPLIT, UKSTRIKE to OILSPLIT, IRAN to GULF, USREST to GULF, GULF to PARTNERS, OILSPLIT to TABLE, USREST to TABLE, TABLE to KYIV, TABLE to EUROPE, FRDEBT to SPREAD, SPREAD to HAVEN, OILSPLIT to RATES, HAVEN to CHEXP, FRDEBT to CHEXP, EUROPE to CHEXP, RATES to VNEXP, CHINA to VNEXP"><defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L7,4 L0,7 z" class="arrow"/></marker></defs><path d="M171.0,35.5 C200.5,35.5 200.5,84.5 230.0,84.5" class="edge" marker-end="url(#ar)"/><path d="M178.0,114.5 C204.0,114.5 204.0,84.5 230.0,84.5" class="edge" marker-end="url(#ar)"/><path d="M171.0,35.5 C200.5,35.5 200.5,171.0 230.0,171.0" class="edge" marker-end="url(#ar)"/><path d="M143.0,186.0 C186.5,186.0 186.5,171.0 230.0,171.0" class="edge" marker-end="url(#ar)"/><path d="M414.0,171.0 C440.0,171.0 440.0,60.0 466.0,60.0" class="edge" marker-end="url(#ar)"/><path d="M407.0,84.5 C436.5,84.5 436.5,139.0 466.0,139.0" class="edge" marker-end="url(#ar)"/><path d="M143.0,186.0 C304.5,186.0 304.5,139.0 466.0,139.0" class="edge" marker-end="url(#ar)"/><path d="M643.0,139.0 C672.5,139.0 672.5,107.0 702.0,107.0" class="edge" marker-end="url(#ar)"/><path d="M643.0,139.0 C672.5,139.0 672.5,178.5 702.0,178.5" class="edge" marker-end="url(#ar)"/><path d="M122.0,250.0 C176.0,250.0 176.0,265.0 230.0,265.0" class="edge" marker-end="url(#ar)"/><path d="M407.0,265.0 C436.5,265.0 436.5,218.0 466.0,218.0" class="edge" marker-end="url(#ar)"/><path d="M407.0,84.5 C436.5,84.5 436.5,297.0 466.0,297.0" class="edge" marker-end="url(#ar)"/><path d="M636.0,218.0 C787.0,218.0 787.0,178.5 938.0,178.5" class="edge" marker-end="url(#ar)"/><path d="M122.0,250.0 C530.0,250.0 530.0,178.5 938.0,178.5" class="edge" marker-end="url(#ar)"/><path d="M886.0,178.5 C912.0,178.5 912.0,178.5 938.0,178.5" class="edge" marker-end="url(#ar)"/><path d="M650.0,297.0 C676.0,297.0 676.0,250.0 702.0,250.0" class="edge" marker-end="url(#ar)"/><path d="M178.0,321.5 C440.0,321.5 440.0,250.0 702.0,250.0" class="edge" marker-end="url(#ar)"/><g class="node"><rect x="0.0" y="4.0" width="171.0" height="63.0" rx="3"/><text x="85.5" y="23.0" text-anchor="middle"><tspan x="85.5" dy="0">Iran war</tspan><tspan x="85.5" dy="15">tankers attacked near</tspan><tspan x="85.5" dy="15">Hormuz</tspan></text></g><g class="node"><rect x="0.0" y="83.0" width="178.0" height="63.0" rx="3"/><text x="89.0" y="102.0" text-anchor="middle"><tspan x="89.0" dy="0">Ukraine strikes</tspan><tspan x="89.0" dy="15">Russian refineries and</tspan><tspan x="89.0" dy="15">tankers</tspan></text></g><g class="node"><rect x="0.0" y="162.0" width="143.0" height="48.0" rx="3"/><text x="71.5" y="181.0" text-anchor="middle"><tspan x="71.5" dy="0">America wants out</tspan><tspan x="71.5" dy="15">of costly wars</tspan></text></g><g class="node"><rect x="0.0" y="226.0" width="122.0" height="48.0" rx="3"/><text x="61.0" y="245.0" text-anchor="middle"><tspan x="61.0" dy="0">France: riots</tspan><tspan x="61.0" dy="15">and heavy debt</tspan></text></g><g class="node"><rect x="0.0" y="290.0" width="178.0" height="63.0" rx="3"/><text x="89.0" y="309.0" text-anchor="middle"><tspan x="89.0" dy="0">China presses Manila</tspan><tspan x="89.0" dy="15">and builds an air base</tspan><tspan x="89.0" dy="15">in Laos</tspan></text></g><g class="node"><rect x="236.0" y="53.0" width="171.0" height="63.0" rx="3"/><text x="321.5" y="72.0" text-anchor="middle"><tspan x="321.5" dy="0">TANKER SHORTAGE</tspan><tspan x="321.5" dy="15">one oil price becomes</tspan><tspan x="321.5" dy="15">three</tspan></text></g><g class="node"><rect x="236.0" y="132.0" width="178.0" height="78.0" rx="3"/><text x="325.0" y="151.0" text-anchor="middle"><tspan x="325.0" dy="0">US PULLS BACK FROM THE</tspan><tspan x="325.0" dy="15">GULF</tspan><tspan x="325.0" dy="15">diplomats leave Saudi</tspan><tspan x="325.0" dy="15">Arabia</tspan></text></g><g class="node terminal"><rect x="472.0" y="28.5" width="171.0" height="63.0" rx="3"/><text x="557.5" y="47.5" text-anchor="middle"><tspan x="557.5" dy="0">PARTNERS PAY</tspan><tspan x="557.5" dy="15">UK jets, Egypt weighs</tspan><tspan x="557.5" dy="15">a vote</tspan></text></g><g class="node"><rect x="472.0" y="107.5" width="171.0" height="63.0" rx="3"/><text x="557.5" y="126.5" text-anchor="middle"><tspan x="557.5" dy="0">THREE-WAY TABLE</tspan><tspan x="557.5" dy="15">Trump-Putin-Xi summit</tspan><tspan x="557.5" dy="15">talk</tspan></text></g><g class="node terminal"><rect x="708.0" y="75.5" width="171.0" height="63.0" rx="3"/><text x="793.5" y="94.5" text-anchor="middle"><tspan x="793.5" dy="0">KYIV SQUEEZED</tspan><tspan x="793.5" dy="15">Starlink capped, then</tspan><tspan x="793.5" dy="15">eased</tspan></text></g><g class="node"><rect x="708.0" y="154.5" width="178.0" height="48.0" rx="3"/><text x="797.0" y="173.5" text-anchor="middle"><tspan x="797.0" dy="0">EUROPE LEFT OUTSIDE</tspan><tspan x="797.0" dy="15">talks, sends no troops</tspan></text></g><g class="node"><rect x="236.0" y="226.0" width="171.0" height="78.0" rx="3"/><text x="321.5" y="245.0" text-anchor="middle"><tspan x="321.5" dy="0">FRANCE PAYS MORE THAN</tspan><tspan x="321.5" dy="15">ITALY</tspan><tspan x="321.5" dy="15">to borrow for ten</tspan><tspan x="321.5" dy="15">years</tspan></text></g><g class="node"><rect x="472.0" y="186.5" width="164.0" height="63.0" rx="3"/><text x="554.0" y="205.5" text-anchor="middle"><tspan x="554.0" dy="0">RUN TO SAFETY</tspan><tspan x="554.0" dy="15">franc, yen, Japanese</tspan><tspan x="554.0" dy="15">bonds</tspan></text></g><g class="node"><rect x="472.0" y="265.5" width="178.0" height="63.0" rx="3"/><text x="561.0" y="284.5" text-anchor="middle"><tspan x="561.0" dy="0">DEARER LOANS IN ASIA</tspan><tspan x="561.0" dy="15">Philippines raises its</tspan><tspan x="561.0" dy="15">rate</tspan></text></g><g class="node terminal"><rect x="944.0" y="139.5" width="164.0" height="78.0" rx="3"/><text x="1026.0" y="158.5" text-anchor="middle"><tspan x="1026.0" dy="0">WHERE IT HITS</tspan><tspan x="1026.0" dy="15">SWITZERLAND</tspan><tspan x="1026.0" dy="15">strong franc, closer</tspan><tspan x="1026.0" dy="15">NATO talks</tspan></text></g><g class="node terminal"><rect x="708.0" y="218.5" width="171.0" height="63.0" rx="3"/><text x="793.5" y="237.5" text-anchor="middle"><tspan x="793.5" dy="0">WHERE IT HITS VIETNAM</tspan><tspan x="793.5" dy="15">dear fuel, capital</tspan><tspan x="793.5" dy="15">short</tspan></text></g></svg></div></div></section>
+  <h2 id="now-step-by-step">Now, step by step</h2><section class="lad"><h3 id="vietnam">Vietnam</h3><div class="rulebox"><b>The mechanism</b><p><strong>Q: How does a poor country get rich?</strong></p>
+<p><strong>A: It builds roads, ports and factories faster than it can save for them.</strong></p>
+<p><strong>Q: Who pays the difference?</strong></p>
+<p><strong>A: Lenders and foreign buyers, while money is cheap.</strong></p>
+<p><strong>Think of it like this. A family adds floors to its house with loans and rent from lodgers. When the bank raises its rate, the house stops at the second floor.</strong></p>
+<p><strong>This week the family is Vietnam, and the bank is a region where money got dearer.</strong></p></div><ol class="ladder"><li><span class="what">Vietnam and EFTA set their free trade deal for signing during Swiss President Parmelin's visit to Hanoi. EFTA is the trade group of Switzerland, Norway, Iceland and Liechtenstein.</span><span class="why"><b>because</b>the Swiss government announced the signing and tied its date to the visit. <a href="https://www.admin.ch/en/newnsb/nFr5JFmp-iss" rel="noopener">Swiss Federal Council, Oct 17</a></span></li><li><span class="what">So why one more trade deal, and why now? The timing is the visit. The deal is ready, and the Swiss president is in Hanoi to sign it. The motive is to spread risk, so no single big power can squeeze Vietnam's exports.</span><span class="why"><b>because</b>no source quotes Hanoi's own reason. East Asia Forum reads the deal as part of Vietnam's drive to trade with more partners. <a href="https://eastasiaforum.org/2026/10/24/trade-diversification-wont-fix-vietnams-import-dependence/" rel="noopener">East Asia Forum, Oct 24</a></span></li><li><span class="what">But new partners do not shrink what Vietnam depends on. East Asia Forum counts its 2025 trade at $256.4bn with China and $172.5bn with the US.</span><span class="why"><b>because</b>the forum says the real limit is weak Vietnamese firms, not a shortage of partners. A country that cannot make the parts keeps buying them from the same places. <a href="https://eastasiaforum.org/2026/10/24/trade-diversification-wont-fix-vietnams-import-dependence/" rel="noopener">East Asia Forum, Oct 24</a></span></li><li><span class="what">So growth leans on building. Fulcrum says Vietnam's growth target rests on roads, ports and power, and outruns the money Vietnam can raise to pay for them.</span><span class="why"><b>because</b>when a country's own firms are weak, it grows by public building, paid for up front with saved or borrowed money. East Asia Forum adds that each unit of growth now needs more investment than before, so the gap widens. <a href="https://fulcrum.sg/article/commentaries/vietnams-growth-ambitions-are-outrunning-its-capital/" rel="noopener">Fulcrum, Oct 20</a> · <a href="https://eastasiaforum.org/2026/10/24/trade-diversification-wont-fix-vietnams-import-dependence/" rel="noopener">East Asia Forum, Oct 24</a></span></li><li><span class="what">And the price of that borrowed money just rose next door. The Philippine central bank raised its key interest rate to 5.5% to fight rising prices, as growth slows.</span><span class="why"><b>because</b>Nikkei reports the rise as a move against rising prices while growth weakens, the mix that makes lenders cautious. <a href="https://asia.nikkei.com/business/markets/philippines-raises-key-rate-to-5.5-as-inflation-saps-growth" rel="noopener">Nikkei Asia, Oct 22</a></span></li><li class="end"><span class="what">Which is why Vietnam's gap hurts now: it must borrow in a region where lenders just asked for more.</span><span class="why"><b>because</b>when a neighbour raises rates, lenders ask more of every borrower nearby. No source this week ties the Philippine move to Vietnam, so this last link is mechanism, not reported fact.</span></li></ol><div class="miss"><b>What most people miss</b>Southeast Asia's best export story depends on a boom that lenders now doubt. Fulcrum calls AI-related exports the bright spot in a gloomy world economy. It urges the region to bet more on them <a href="https://fulcrum.sg/article/commentaries/southeast-asia-should-double-down-on-the-ai-supply-chain/" rel="noopener">Fulcrum, Oct 21</a>. In the same week, Nikkei reports stalled share sales and swinging share prices for Asian data-centre firms <a href="https://asia.nikkei.com/business/technology/artificial-intelligence/asia-s-ai-data-center-boom-faces-reality-check-from-public-markets" rel="noopener">Nikkei Asia, Oct 23</a>. A growth plan short of money at home also depends on demand that lenders abroad now question.</div></section><section class="lad"><h3 id="switzerland">Switzerland</h3><div class="rulebox"><b>The mechanism</b><p><strong>Q: Where does money go when a neighbour's house is on fire?</strong></p>
+<p><strong>A: To the safest house nearby.</strong></p>
+<p><strong>Q: Is that good for the safe house?</strong></p>
+<p><strong>A: For its savers, yes. For its sellers, no: their goods get dearer abroad.</strong></p>
+<p><strong>Think of it like this. A fire breaks out on a street. Everyone stores their savings in the one house with a strong safe. That family's own shop sits on the burning street, and its customers stay away.</strong></p>
+<p><strong>This week the burning street is France, and the strong safe is Switzerland.</strong></p></div><ol class="ladder"><li><span class="what">France's cost of borrowing for ten years passed 5%, more than Italy or Spain pay. Moody's, the rating agency, still held France's credit rating.</span><span class="why"><b>because</b>when lenders doubt that a government can steer, they charge more. Riots and a weak government feed that doubt before the rating agencies act. <a href="https://www.letemps.ch/articles/moody-s-offre-un-sursis-a-la-france-les-marches-financiers-eux-n-attendent-pas" rel="noopener">Le Temps, Oct 24</a></span></li><li><span class="what">So the price of insurance against France not repaying jumped. It is up more than 2.5 times since the end of August, and now above Rome, Athens or Madrid.</span><span class="why"><b>because</b>finews says the franc shows this stress first. When doubt about a big euro borrower rises, money looks for the nearest safe currency. <a href="https://www.finews.com/news/english-news/74115-credit-default-swaps-cds-france-spain-germany-eurozone-swiss-franc-euro-exchange-rate" rel="noopener">finews, Oct 22</a></span></li><li><span class="what">And the money looking for safety found the franc. The franc broke below 0.92 per euro, its strongest level since early July.</span><span class="why"><b>because</b>swissinfo reports that money seeking safety returns to Switzerland from France. <a href="https://www.swissinfo.ch/eng/macroeconomics/the-franc-is-once-again-becoming-a-safe-haven-currency/92258374" rel="noopener">swissinfo, Oct 22</a></span></li><li><span class="what">So why the franc, and why this week? Switzerland has low debt and steady rules next door to the euro. When a big euro country gets into trouble, savers park money there. The timing is France's: its borrowing cost and its riots both rose this week.</span><span class="why"><b>because</b>swissinfo says the franc is once again a safe place for money, and ties the move to the doubt about France. <a href="https://www.swissinfo.ch/eng/macroeconomics/the-franc-is-once-again-becoming-a-safe-haven-currency/92258374" rel="noopener">swissinfo, Oct 22</a></span></li><li><span class="what">Which the central bank did not expect. The Swiss National Bank's September minutes, published this week, dropped its stated readiness to sell francs.</span><span class="why"><b>because</b>the bank judged that money fleeing the wars faded, and that prices stayed in range. The franc's rise this week goes against that view. <a href="https://www.snb.ch/en/publications/communication/summaries/zus_20261022" rel="noopener">SNB, Oct 22</a> · <a href="https://www.swissinfo.ch/eng/snb-judged-franc-threat-no-longer-needed-as-haven-flows-ebbed/92256646" rel="noopener">swissinfo, Oct 22</a></span></li><li class="end"><span class="what">So the bill lands on exporters. Breitling's chief executive says the riots in France, including the wrecking of its Marseille shop, devastated business.</span><span class="why"><b>because</b>a strong franc makes Swiss goods dearer abroad, and a neighbour in turmoil buys less. Swiss sellers to France suffer both at once. <a href="https://www.swissinfo.ch/eng/swiss-industry/breitling-ceo-business-devastated-by-unrest-in-france/92266681" rel="noopener">swissinfo, Oct 24</a></span></li></ol><div class="miss"><b>What most people miss</b>Switzerland's neutrality faces a test in its software as much as in its army. Reporters found that the army looked at working with Palantir, the American data company, five times and said no each time. In three cases the reason was a lack of control over data <a href="https://www.swissinfo.ch/eng/best-of-srg-content/swiss-army-rejected-us-tech-firm-palantir-on-five-occasions/92238602" rel="noopener">swissinfo, Oct 19</a>. When America steps back, a small country's safety includes who can read its files.</div></section><section class="lad"><h3 id="united-states">United States</h3><div class="rulebox"><b>The mechanism</b><p><strong>Q: What does a leading power do when it cannot pay every bill?</strong></p>
+<p><strong>A: It pays the one its own voters feel first.</strong></p>
+<p><strong>Q: And the other bills?</strong></p>
+<p><strong>A: It hands them to friends, or settles with rivals.</strong></p>
+<p><strong>Think of it like this. A landlord short of cash fixes the heating his tenants feel. He lets the neighbours guard the back gate and makes peace with the gang next door.</strong></p>
+<p><strong>This week the landlord is Washington, and the heating is the fuel price before the 3 November vote.</strong></p></div><ol class="ladder"><li><span class="what">Washington pushes Moscow toward talks to end the Ukraine war. NZZ reports that a summit of Putin, Trump and Xi is now more likely.</span><span class="why"><b>because</b>a leading power that wants out of a war turns to the rivals who can end it, not to the ally who fights it. <a href="https://www.nzz.ch/international/putin-will-einen-dreiergipfel-mit-trump-und-xi-ld.10040005" rel="noopener">NZZ, Oct 21</a></span></li><li><span class="what">So why push for a deal, and why now? Friedman says the war is a stalemate that nobody wins. The Russian diesel deal makes possible a trade-for-peace offer tied to the oil crisis.</span><span class="why"><b>because</b>he says the American rule is to avoid costly wars, and that Trump must end the Iran war to end the oil crisis. <a href="https://geopoliticalfutures.com/trump-zelenskyy-and-the-inescapable-ukraine-stalemate-podcast/" rel="noopener">Geopolitical Futures, Oct 22</a></span></li><li><span class="what">So Kyiv paid first. The US capped Starlink, the satellite internet Ukraine's army uses, to systems moving below 160 kph. While the cap held, Russia fired over 1,200 drones and missiles in four nights.</span><span class="why"><b>because</b>O'Brien says the cap holds back Ukraine's fast air-defence drones and its mid-range strikes, which weakens Kyiv's hand before talks. <a href="https://phillipspobrien.substack.com/p/weekend-update-207-the-us-russia" rel="noopener">Phillips P. O'Brien, Oct 18</a></span></li><li><span class="what">Then Washington eased the pressure. Trump said the limits were lifted, Kyiv said they were not, and by 24 October Ukraine's military said they were removed.</span><span class="why"><b>because</b>the pressure made its point, and an open break with Kyiv costs Washington in Europe. <a href="https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o" rel="noopener">BBC, Oct 23</a> · <a href="https://www.ft.com/content/5b5592f4-c59d-4eb1-af78-078dc32fcab8" rel="noopener">FT, Oct 24</a></span></li><li><span class="what">Kyiv is not the only ally Washington leaves to pay. Houthi rebels from Yemen struck an airport and an oil field in Saudi Arabia and killed at least three. The US then ordered some diplomats out of the kingdom.</span><span class="why"><b>because</b>guarding the Gulf now means men and money under daily fire, the kind of cost Friedman's rule avoids. Geopolitical Futures reports US troop cuts in Jordan, Qatar and Kuwait. <a href="https://www.bbc.co.uk/news/articles/c6x2vpk93770o" rel="noopener">BBC, Oct 22</a> · <a href="https://geopoliticalfutures.com/daily-memo-changes-in-us-troop-presence-in-the-middle-east/" rel="noopener">Geopolitical Futures, Oct 22</a></span></li><li class="end"><span class="what">So America's friends pay the bill. Britain is sending jets to defend Saudi Arabia, and Egypt's parliament postponed its vote on military aid to the kingdom until 26 October.</span><span class="why"><b>because</b>when America steps back, the people it protected either pay others to protect them or protect themselves. <a href="https://www.bbc.co.uk/news/articles/ckr5yqe1r1llo" rel="noopener">BBC, Oct 20</a> · <a href="https://geopoliticalfutures.com/saudi-allies-weigh-the-cost-of-support/" rel="noopener">Geopolitical Futures, Oct 21</a></span></li></ol><div class="miss"><b>What most people miss</b>America can step back because it can afford to. Zeihan says the missiles Iran supplies to the Houthis reach 100 to 600 miles. To secure Gulf energy by force, America must occupy Yemen, Iraq and Iran together. That leaves Washington a deal with Iran or walking away <a href="https://zeihan.com/should-the-u-s-military-invade-yemen/" rel="noopener">Zeihan, Oct 20</a>. And in his oil split, North America is the cheap zone. The country that leaves is the one the danger costs least.</div></section><section class="lad"><h3 id="china">China</h3><div class="rulebox"><b>The mechanism</b><p><strong>Q: Where does a rising power push?</strong></p>
+<p><strong>A: Where the old protector stopped looking.</strong></p>
+<p><strong>Q: What holds it back?</strong></p>
+<p><strong>A: Its own weak points at home.</strong></p>
+<p><strong>Think of it like this. A new gang boss tests the shops the old guard stopped visiting. But his gang has no second in command, and his own takings are falling.</strong></p>
+<p><strong>This week the gang boss is Beijing, and the shops are Manila and Laos.</strong></p></div><ol class="ladder"><li><span class="what">China's ambassador to Manila, Jing Quan, said China can "easily win" a war against the Philippines. A Philippine senator filed a resolution to expel him.</span><span class="why"><b>because</b>words cost little, and they show how far the neighbour's protector will go. <a href="https://thediplomat.com/2026/10/philippine-senator-files-resolution-seeking-chinese-ambassadors-expulsion/" rel="noopener">The Diplomat, Oct 20</a></span></li><li><span class="what">So why threaten Manila in words, and why now? No source this week reports Beijing's own reason. The Diplomat records what came before: Manila said Beijing blocked a supply run to its grounded warship on a disputed shoal last month.</span><span class="why"><b>because</b>a rising power tests a neighbour with words before it tests him with ships, and the shoal is where the test runs. <a href="https://thediplomat.com/2026/10/china-coast-guard-says-it-monitored-philippine-resupply-mission-at-contested-shoal/" rel="noopener">The Diplomat, Oct 22</a></span></li><li><span class="what">Then Beijing said relations are at a "critical juncture", a turning point. Its coast guard said it "monitored" a new Philippine supply run to the same shoal.</span><span class="why"><b>because</b>watching instead of blocking keeps the pressure on without a clash. <a href="https://thediplomat.com/2026/10/after-war-of-words-china-says-relations-with-philippines-at-critical-juncture/" rel="noopener">The Diplomat, Oct 19</a> · <a href="https://thediplomat.com/2026/10/china-coast-guard-says-it-monitored-philippine-resupply-mission-at-contested-shoal/" rel="noopener">The Diplomat, Oct 22</a></span></li><li><span class="what">So America answered with a warship. A US warship sailed through the area, which angered China, and Manila took it as a sign of support.</span><span class="why"><b>because</b>the Philippines has a defence treaty with the US, so Washington must appear even while it steps back elsewhere. NZZ asks how much the show impresses Beijing. <a href="https://www.nzz.ch/international/chinas-kuestenwache-provoziert-nachbarn-wie-die-usa-antworten-ld.10040002" rel="noopener">NZZ, Oct 22</a></span></li><li><span class="what">And China builds on land, where no warship can sail past. The Diplomat places China's new air base in Laos in a wider pattern of Chinese military reach on Vietnam's western border.</span><span class="why"><b>because</b>a base supplied over land cannot be watched or blocked at sea, so it adds reach that Washington's ships cannot answer. <a href="https://thediplomat.com/2026/10/expanding-the-military-footprint-chinas-new-air-base-in-laos/" rel="noopener">The Diplomat, Oct 20</a></span></li><li class="end"><span class="what">But all of this reach, at sea and on land, lasts only as long as Xi does. Zeihan says Xi, who is 80, looked unwell at his White House summit, and that 14 years of removing rivals left no successor.</span><span class="why"><b>because</b>when every rival institution is emptied, no one can replace the leader smoothly. A system run from the top is strong until the top fails. <a href="https://zeihan.com/does-china-have-a-succession-plan/" rel="noopener">Zeihan, Oct 19</a></span></li></ol><div class="miss"><b>What most people miss</b>The West's walls keep China's surplus alive. East Asia Forum argues that Western tariffs, supply-chain controls and investment screening block the price falls and closures that can clear China's spare factory capacity. So they prolong it, at a rising cost to the West <a href="https://eastasiaforum.org/2026/10/23/geopolitics-is-prolonging-chinas-overcapacity-problem/" rel="noopener">East Asia Forum, Oct 23</a>. A barrier meant to shrink a rival's factories can keep those factories open.</div></section>
+  <h2 id="seen-from-their-own-capital">Seen from their own capital</h2>
+  <ul><li><strong>Kyiv</strong> wants to make Russia's war too costly before a deal is struck without it. Its tools are cheap: Zeihan says small ground drones made the last 100–150 km behind Russia's front a zone where no supply can move <a href="https://zeihan.com/ground-drones-hit-the-frontlines-in-ukraine/" rel="noopener">Zeihan, Oct 21</a>.</li><li><strong>Moscow</strong> wants talks without concessions. The BBC's Russia editor says Putin feels no pressure to end the war, even after agreeing to talk <a href="https://www.bbc.co.uk/news/articles/cm98zn5j89kdo" rel="noopener">BBC, Oct 21</a>.</li><li><strong>Tehran</strong> wants to survive, not surrender. NZZ reports that Iran's last oil money, from crude stored outside the Gulf, is running dry. Experts expect that to harden Tehran rather than break it <a href="https://www.nzz.ch/international/irans-schattenflotte-geht-das-oel-aus-teheran-duerfte-trotzdem-nicht-kapitulieren-ld.10042266" rel="noopener">NZZ, Oct 23</a>.</li><li><strong>Paris</strong> wants its energy secured even while its streets burn. Macron toured the Gulf states during France's worst riots in years and defended the trip as needed for France's energy supply <a href="https://www.nzz.ch/international/schwere-autoritaetskrise-warum-macron-ausgerechnet-jetzt-sein-land-verliess-ld.10041316" rel="noopener">NZZ, Oct 22</a>.</li></ul>
+  
+  <h2 id="what-most-people-miss">What most people miss</h2><div class="miss"><b>The part most people miss</b><p><strong>A peace between Washington and Moscow will not make Europe safer.</strong> Foreign Affairs reports that over the past year Moscow came to see Europe, not America, as its main enemy <a href="https://www.foreignaffairs.com/russia/how-russia-sees-world-now" rel="noopener">Foreign Affairs, Oct 21</a>. Germany's chancellor says his country faces "intensive" spying after the arrest of a suspected Russian spy <a href="https://www.bbc.co.uk/news/articles/cmx28y5e04ggo" rel="noopener">BBC, Oct 22</a>. A Russian military satellite spent weeks closing in on a US radar satellite <a href="https://www.nzz.ch/visuals/russischer-satellit-verfolgt-us-satelliten-die-rekonstruktion-ld.10039194" rel="noopener">NZZ, Oct 24</a>. A deal at the three-way table can end America's war with Russia while Europe's goes on.</p></div>
+  <h2 id="so-what-would-change-the-answer">So what would change the answer</h2><p><strong>The one step: does America settle Ukraine with Moscow, and perhaps Beijing, without Kyiv at the table?</strong> The oil split, the Gulf pullback and the run to safety all follow from one guard choosing which roads he still covers.</p>
+<div class="scroll"><table><thead><tr><th>If you see this</th><th>Then expect</th></tr></thead><tbody><tr><td>A date is set for a Trump–Putin–Xi summit</td><td>Ukraine's terms are written by the three big powers, and Europe raises its own defence spending faster.</td></tr><tr><td>The cost of delivering Gulf oil to Asia keeps rising past $40 a barrel</td><td>Asian importers, Vietnam among them, face dearer fuel into winter, and more central banks in the region raise rates.</td></tr><tr><td>France's ten-year borrowing cost falls back below Italy's</td><td>The run to the franc eases, and Swiss exporters get some relief.</td></tr></tbody></table></div><div class="fork"><div class="arm holds"><b>If it holds</b>America trades its old guard duties for cheaper fuel and fewer wars. Europe and the Gulf states pay for their own defence, and the price of oil depends on how far a buyer sits from America.</div><div class="arm rev"><b>If it reverses</b>only actions count: Ukraine at the signing table, US troops back in Gulf bases, or Starlink limits that stay lifted for months.</div></div>
+  <h2 id="now-you-try">Now you try</h2><div class="turn"><p><strong>The move to copy this week.</strong> When a guard steps back, do not ask only whether the danger grows. Ask <strong>who now stands farthest from the guard, and what their bill looks like.</strong></p>
+<p><strong>Three questions to ask of any story next week:</strong></p>
+<p>1. Who stopped paying for something this week, and who started? 2. Is this one price everywhere, or does it change with distance and route? 3. If I am right, what will I actually see? A number, a date or a shipment. Never a statement.</p>
+<p><strong>Now try it on one we have not answered.</strong> Egypt's parliament votes on 26 October on sending military help to defend Saudi Arabia against the Houthis. Run the three questions on it. Who paid for Saudi safety until now? What does Cairo gain, and what does it risk? Will Egypt vote yes, vote no, or delay again?</p>
+<p>Write your answer down before next Saturday. Next week's report settles it, and that is the only way to learn whether your reasoning was right or only comfortable.</p></div>
+  <h2 id="the-full-essays">The full essays</h2><ul><li>France Becomes the Weak Link: riots, spreads and the run to havens</li><li>Manila Under Pressure, Hanoi Short of Capital</li><li>The Great Oil Split: one world oil price becomes three</li><li>The Three-Way Table: Ukraine's stalemate is being settled over Kyiv's head</li></ul><p class="sub">Full text lives in the vault under <code>weekly/2026-W43/</code>.</p>
+
+  <footer>254 items from 30 sources (23 working). Full log: scan-log. <em>If any step in any ladder above does not follow from the one before it, say which number. A numbered chain can be checked. Prose cannot.</em> &middot; <a href="../">All weeks &rarr;</a></footer>
+  
+</div>
+
+<script>
+(function(){
+  var DEFS = {"Article 4":"NATO's \"let's talk about this\" button. Any member that feels threatened can call all the others into emergency consultation. It is deliberately low-cost — it commits nobody to fight, it just forces a formal conversation. That is why not using it is meaningful: if a country will not even ask for a meeting after being hit, it is telling you something about how much it expects the alliance to do.","Article 5":"NATO's \"an attack on one is an attack on all\" clause — the actual mutual-defence promise. Far heavier than Article 4, and invoked only once in NATO's history (after 9/11).","Transshipment":"Routing goods through a third country to disguise where they were really made — for example, Chinese goods shipped to Vietnam, relabelled, then exported to the US to dodge tariffs aimed at China. It matters because a transshipment finding is far worse than a tariff: a tariff is a price, but a transshipment ruling can invalidate a country's whole role as a manufacturing alternative.","Rate gap":"The difference between what two countries pay you for holding their money. If the US pays much more than Japan, money flows out of yen into dollars, and the yen falls. Most currency moves are just this gap widening or narrowing — you rarely need any other explanation.","Deleveraging":"Being forced to sell because you borrowed to buy. When prices fall or borrowing gets more expensive, lenders demand their money back, so you sell whatever you own — often good assets, at bad prices, all at once. It is why a problem in one corner of a market spreads to unrelated things.","The Fed put":"The market's assumption that if prices fall far enough, the US central bank will step in and cut rates to stop the fall. It is not a written promise — it is a habit investors have come to rely on. When people start doubting it, they take less risk, and prices fall further.","Petroline":"The Saudi pipeline that carries oil across the country to the Red Sea, so tankers can avoid the Strait of Hormuz entirely. It is the main backup route if the Gulf is blocked — which is exactly why threatening it removes the world's spare option.","Strait of Hormuz":"The narrow sea passage at the mouth of the Gulf that a large share of the world's traded oil ships through. Its importance is geographic, not political: there is no quick alternative route for most of that volume.","Arbitral Award":"The 2016 international tribunal ruling that rejected China's expansive South China Sea claims. China refuses to recognise it. Whether a country publicly backs the Award is a low-cost, highly visible test of how far it will go to displease Beijing.","Four No's":"Vietnam's standing defence policy: no military alliances, no siding with one country against another, no foreign bases, no using force in international relations. In practice it is a formula for staying useful to everyone and committed to no one.","China+1":"The strategy of keeping factories in China but adding a second country — often Vietnam — to reduce tariff and political risk. Vietnam's export boom largely rides on it, which is why anything that questions Vietnam's independence from China (see **Transshipment**) threatens more than a single tariff line.","Middle-income trap":"When a country gets moderately rich on cheap labour, then stalls — wages have risen too high to compete on cost, but skills and technology have not risen enough to compete on quality. Escaping it usually needs sustained education and research spending, which is slow and politically unrewarding.","Fiscal equalisation":"Switzerland's system where richer cantons transfer money to poorer ones. It is normally uncontroversial plumbing, so a rich canton openly fighting it is a signal that internal wealth-gap politics is heating up.","Neutrality initiative":"A Swiss popular vote proposal to write strict neutrality into the constitution — which would bind future governments rather than leaving neutrality a matter of policy. Launched from the political right, so left-wing groups backing it is a genuine change in its odds.","Current account surplus":"The amount by which a country sells more to the world than it buys, counting services and investment income too. A persistent large surplus in one country must show up as deficits in others — which is why it becomes a political problem, not just an accounting one.","Reserve currency":"A currency other countries hold as savings and use to settle trade — today mostly the dollar. It requires trust and openness above all, which is why a country can dominate trade and still not have one.","Internal order stages":"Ray Dalio's six-stage model of a country's internal life cycle, running from a new order through prosperity and excess to conflict and breakdown. The digest tracks each country's stage; Stage 5 means serious internal conflict, Stage 6 means it has broken.","PMI":"A monthly survey of purchasing managers, used as an early read on whether an economy is expanding or contracting. Above 50 means growth, below 50 means contraction. Its value is speed — it arrives long before official GDP figures.","FX intervention":"A government buying or selling its own currency to move the price. It can change the price for days, but it does not change the reason the currency was moving — so it buys time rather than fixing the cause.","ISR":"Intelligence, surveillance and reconnaissance — the business of finding targets and watching what the other side does. It matters because supplying ISR can decide a war's outcome without firing anything, and is far easier to deny.","Section 301":"A US trade law letting Washington impose tariffs unilaterally after finding another country's practices unfair. Its significance is procedural: it gives the executive a tariff route that does not need new legislation."};
+  document.addEventListener('click', function(ev){
+    var btn = ev.target.closest ? ev.target.closest('button.term') : null;
+    if (!btn) return;
+    var key = btn.getAttribute('data-term');
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    var host = btn.closest('p,li,div,td') || btn.parentNode;
+    var existing = host.parentNode.querySelector('.termdef[data-for="' + key + '"]');
+    if (open) { btn.setAttribute('aria-expanded','false'); if (existing) existing.remove(); return; }
+    if (!DEFS[key]) return;
+    var box = document.createElement('div');
+    box.className = 'termdef'; box.setAttribute('data-for', key);
+    var b = document.createElement('b'); b.textContent = key;
+    var t = document.createElement('span'); t.textContent = DEFS[key];
+    box.appendChild(b); box.appendChild(t);
+    host.parentNode.insertBefore(box, host.nextSibling);
+    btn.setAttribute('aria-expanded','true');
+  });
+})();
+</script>
+<script data-root="../">
+(function(){
+  var root = document.currentScript.getAttribute('data-root') || './';
+  var q = document.getElementById('q'), res = document.getElementById('res');
+  var pick = document.getElementById('wkpick');
+  if (pick) pick.addEventListener('change', function(){
+    if (pick.value) location.href = root + pick.value + '/';
+    else location.href = root;
+  });
+  if (!q || !res) return;
+
+  var idx = null, loading = false, cur = -1, hits = [];
+
+  function load(){
+    if (idx || loading) return Promise.resolve();
+    loading = true;
+    return fetch(root + 'search-index.json')
+      .then(function(r){ return r.json(); })
+      .then(function(j){ idx = j; loading = false; })
+      .catch(function(){ loading = false; idx = []; });
+  }
+
+  function esc(s){ return s.replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function terms(s){
+    return s.toLowerCase().split(/[^a-z0-9à-ỹ]+/i).filter(function(t){ return t.length > 1; });
+  }
+
+  // Snippet centred on the first match, with every term marked. Cut on a word boundary so
+  // the excerpt does not start mid-syllable.
+  function snippet(text, ts){
+    var low = text.toLowerCase(), at = -1;
+    for (var i = 0; i < ts.length; i++){
+      var p = low.indexOf(ts[i]);
+      if (p !== -1 && (at === -1 || p < at)) at = p;
+    }
+    if (at === -1) at = 0;
+    var from = Math.max(0, at - 60), to = Math.min(text.length, from + 190);
+    if (from > 0){ var sp = text.indexOf(' ', from); if (sp !== -1 && sp < from + 20) from = sp + 1; }
+    var s = esc(text.slice(from, to));
+    ts.forEach(function(t){
+      s = s.replace(new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'),
+                    '<mark>$1</mark>');
+    });
+    return (from > 0 ? '…' : '') + s + (to < text.length ? '…' : '');
+  }
+
+  function search(str){
+    var ts = terms(str);
+    if (!ts.length || !idx) return [];
+    var out = [];
+    for (var i = 0; i < idx.length; i++){
+      var r = idx[i], hay = (r.t + ' ' + r.x).toLowerCase(), score = 0, all = true;
+      for (var j = 0; j < ts.length; j++){
+        var n = hay.split(ts[j]).length - 1;
+        if (!n) { all = false; break; }
+        // a hit in the heading, or in the week's own headline, outranks one in the body
+        score += n + (r.t.toLowerCase().indexOf(ts[j]) !== -1 ? 12 : 0) + (r.t === '' ? 6 : 0);
+      }
+      if (all) out.push({ r: r, s: score });
+    }
+    out.sort(function(a, b){ return b.s - a.s; });
+    return out.slice(0, 20).map(function(o){ return o.r; });
+  }
+
+  function render(str){
+    var ts = terms(str);
+    if (!hits.length){
+      res.innerHTML = '<div class="mast-none">Nothing matches “' + esc(str) + '”.</div>';
+      res.hidden = false; q.setAttribute('aria-expanded', 'true');
+      return;
+    }
+    res.innerHTML = hits.map(function(r, i){
+      var where = r.w + (r.t ? ' › ' + esc(r.t) : '');
+      return '<a class="mast-hit' + (i === cur ? ' on' : '') + '" role="option" ' +
+             'href="' + root + r.w + '/' + (r.a ? '#' + r.a : '') + '">' +
+             '<span class="where">' + where + '</span>' +
+             '<span class="snip">' + snippet(r.x, ts) + '</span></a>';
+    }).join('');
+    res.hidden = false; q.setAttribute('aria-expanded', 'true');
+  }
+
+  function close(){
+    res.hidden = true; q.setAttribute('aria-expanded', 'false'); cur = -1;
+  }
+
+  function run(){
+    var v = q.value.trim();
+    if (v.length < 2){ close(); return; }
+    load().then(function(){
+      cur = -1; hits = search(v); render(v);
+    });
+  }
+
+  var t;
+  q.addEventListener('input', function(){ clearTimeout(t); t = setTimeout(run, 120); });
+  q.addEventListener('focus', load);
+  q.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ close(); q.blur(); return; }
+    if (res.hidden || !hits.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+      e.preventDefault();
+      cur += (e.key === 'ArrowDown' ? 1 : -1);
+      if (cur < 0) cur = hits.length - 1;
+      if (cur >= hits.length) cur = 0;
+      render(q.value.trim());
+      var on = res.querySelector('.on'); if (on) on.scrollIntoView({ block: 'nearest' });
+    } else if (e.key === 'Enter' && cur >= 0){
+      e.preventDefault();
+      var a = res.querySelectorAll('.mast-hit')[cur]; if (a) location.href = a.href;
+    }
+  });
+  document.addEventListener('click', function(e){
+    if (!res.hidden && !res.contains(e.target) && e.target !== q) close();
+  });
+  // "/" focuses search, the way every news archive does it.
+  document.addEventListener('keydown', function(e){
+    if (e.key === '/' && document.activeElement !== q &&
+        !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)){
+      e.preventDefault(); q.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
